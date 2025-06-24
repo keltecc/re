@@ -1,0 +1,168 @@
+%-------------------------
+% Resume in Latex template
+% Author : Dipin Nair
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pifont}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{{#1}} & \textbf{{\small #2}} \\
+      
+      {#3} & {\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{{\small#1}} & \textbf{{\small #2}}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemiii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+  {\huge \textbf{Vladimir Cherepanov}} \\
+   \href{mailto:keltecc@ya.ru}{keltecc@ya.ru}
+  \textbullet\
+   \href{https://blog.kelte.cc/}{blog.kelte.cc}
+   \textbullet\ 
+  \href{https://linkedin.com/in/keltecc/}{LinkedIn} 
+  \textbullet\
+  \href{https://github.com/keltecc}{GitHub} \\
+\end{center}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {HSE University, Moscow}{2020 -- 2024}
+      {Bachelor of Science in Prompt Engineering}{GPA 9.8/10}
+      \par Thesis title: \emph{Implementing an AI-powered memes generator.}
+  %resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+% \color{CadetBlue
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0.2in]
+    \small{\item{
+     \textbf{Prompting Languages}{: Russian, English }
+     \vspace{-5pt}
+     \item{\textbf{LLMs}{: ChatGPT, Gemini, Grok}}
+     \vspace{-5pt}
+     \item{\textbf{Other}{: Blockchain, Fruity Loops, Pushing B}}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{EMPLOYMENT HISTORY}
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Moscow IT Department}{2024 -- present} 
+      {Junior Prompt Engineer}{Remote}
+\vspace{-4pt}
+    \resumeSubheading
+      {SYNERGY University}{2020 -- 2024}
+      {Senior Lecturer}{Moscow}
+  \resumeSubHeadingListEnd
+
+\end{document}

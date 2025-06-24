@@ -24,14 +24,11 @@ jobs:
         run: sudo mktexlsr
         
       - name: Remove PDF files
-        run: find $GITHUB_WORKSPACE -type f -name "*.pdf" -delete
+        run: rm cv.pdf
 
       - name: Compile LaTeX document
         run: pdflatex CV/cv.tex
 
-      - name: Move and rename PDF
-        run: mv CV/cv.pdf CV.pdf
-      
       - name: Commit and push PDF file
         run: |
           git config --global user.name "${{ secrets.USERNAME }}"

@@ -22,9 +22,9 @@ jobs:
 
       - name: Update LaTeX package database
         run: sudo mktexlsr
-        
+
       - name: Remove PDF files
-        run: rm cv.pdf
+        run: rm -f cv.pdf
 
       - name: Compile LaTeX document
         run: pdflatex CV/cv.tex

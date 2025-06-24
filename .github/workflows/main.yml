@@ -1,0 +1,41 @@
+name: cv.tex workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'CV/cv.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install LaTeX and required packages
+        run: |
+          sudo apt update
+          sudo apt install -y texlive texlive-latex-extra texlive-fonts-extra
+
+      - name: Update LaTeX package database
+        run: sudo mktexlsr
+        
+      - name: Remove PDF files
+        run: find $GITHUB_WORKSPACE -type f -name "*.pdf" -delete
+
+      - name: Compile LaTeX document
+        run: pdflatex CV/cv.tex
+
+      - name: Move and rename PDF
+        run: mv CV/cv.pdf CV.pdf
+      
+      - name: Commit and push PDF file
+        run: |
+          git config --global user.name "${{ secrets.USERNAME }}"
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git add CV.pdf
+          git commit -m "Add CV.pdf"
+          git push origin main
